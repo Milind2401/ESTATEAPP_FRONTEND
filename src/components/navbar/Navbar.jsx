@@ -50,8 +50,22 @@ function Navbar() {
         <div className={open ? "menu active" : "menu"}>
           <a href="/">Home</a>
           <a href="/contact">Contact</a>
-          <a href="/">Sign in</a>
-          <a href="/">Sign up</a>
+          <div className={open ? "menu active" : "menu"}>
+          <a href="/">Home</a>
+          <a href="/contact">Contact</a>
+          <div>
+          {currentUser ? (
+          <div className="">
+            <a href="/profile">Profile</a>
+          </div>
+        ) : (
+          <div className="side-menu">
+            <a href="/login">Sign in</a>
+            <a href="/register">Sign up</a>
+          </div>
+        )}
+        </div>
+        </div>
         </div>
       </div>
     </nav>

@@ -53,7 +53,10 @@ nav {
     @include md {
       background-color: transparent;
     }
-
+    .side-menu{
+      display: flex;
+      flex-direction: column;
+    }
     a {
       padding: 12px 24px;
       margin: 20px;

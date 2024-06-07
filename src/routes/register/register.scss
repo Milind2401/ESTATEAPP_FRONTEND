@@ -1,3 +1,4 @@
+@import "../../responsive.scss";
 .register {
   height: 100%;
   display: flex;
@@ -60,6 +61,9 @@
     align-items: center;
     overflow: hidden;
     justify-content: center;
+    @include sm{
+      display: none;
+    }
     img {
       width: 100%;
     }
