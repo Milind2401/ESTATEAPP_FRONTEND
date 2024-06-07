@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 function Pin({ item }) {
   const icon = new L.Icon({
     iconUrl: "./mark.png",
-    iconRetinaUrl: "./mark.png",
-    shadowUrl: "./mark.png",
     iconSize: [25, 41],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
