@@ -1,16 +1,19 @@
 import { Marker, Popup } from "react-leaflet";
 import "./pin.scss";
 import { Link } from "react-router-dom";
-import marker from '../../Assets/icons/Location.svg';
-import { Icon } from 'leaflet'
 
 function Pin({ item }) {
-const myIcon = new Icon({
- iconUrl: marker,
- iconSize: [32,32]
-})
+  const icon = new L.Icon({
+    iconUrl: "./mark.png",
+    iconRetinaUrl: "./mark.png",
+    shadowUrl: "./mark.png",
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
   return (
-    <Marker position={[item.latitude, item.longitude]} icon={myIcon}>
+    <Marker position={[item.latitude, item.longitude]} icon={icon}>
       <Popup>
         <div className="popupContainer">
           <img src={item.img} alt="" />
